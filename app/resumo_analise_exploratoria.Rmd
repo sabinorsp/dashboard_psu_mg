@@ -1,0 +1,40 @@
+---
+title: "Analise Exploratória dos dados PSU Minas Gerais 2022"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Análise exploratória dos resultados do PSU Minas Gerais 2022
+
+Os dados já foram tratados previamente na script limpeza_dados.R e salvos no dataset_organizado .csv. 
+
+Importanto o dataset: 
+```{r coleta}
+df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+View(df_orig)
+str(df_orig)
+```
+
+Resumos estatísticos dos valores numéricos: 
+```{r explorando}
+summary(df_orig[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+```
+
+## Seguimos com os plots do boxplot para as variáveis numéricas: 
+
+Notas total para todas as especialidades: 
+```{r plot}
+boxplot(df_orig$Total, main ='Boxplot para as notas Total Todas Especialidades', ylab= 'Total Nota' )
+```
+
+Nota Provas todas as especialidades: 
+
+```{r plot}
+boxplot(df_orig$Nota_Prova, main = 'Boxplot para as notas Provas Todas Especialidades', ylab = 'Notas Provas')
+
+```
