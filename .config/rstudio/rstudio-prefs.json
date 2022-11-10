@@ -1,0 +1,34 @@
+{
+    "initial_working_directory": "~",
+    "editor_theme": "Pastel On Dark",
+    "posix_terminal_shell": "bash",
+    "panes": {
+        "quadrants": [
+            "Console",
+            "TabSet1",
+            "Source",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "Environment",
+            "History",
+            "Connections",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Plots",
+            "Packages",
+            "Help",
+            "Viewer",
+            "Presentations"
+        ],
+        "hiddenTabSet": [],
+        "console_left_on_top": true,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    }
+}

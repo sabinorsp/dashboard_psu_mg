@@ -1,0 +1,6 @@
+# O desenvolvimento desta aplicação é feito pelo uso do container Docker
+# R version: 4.2.1
+
+Para execução da imagem
+Linux: 
+sudo docker run -d -p 8787:8787 -e PASSWORD=<password>  --name rstudio -v $(pwd):/home/rstudio  rocker/rstudio:4.2.1

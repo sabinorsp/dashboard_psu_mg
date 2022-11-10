@@ -1,0 +1,531 @@
+0:'Cirurgia Geral', 'CIRURGIA DO TRAUMA', 'Cirurgia do Aparelho Digestivo',
+0:'Cirurgia de Cabeça e Pescoço', 'Cirurgia da Mão', 'Cirurgia craneo Maxilo Facial',
+0:'Cirurgia Cardiovascular', 'CARDIOLOGIA PEDIÁTRICA', 'Cardiologia', 'Anestesiologia',
+0:'ALERGIA E IMUNOLOGIA PEDIÁTRICA')
+0:df2 <- as.data.frame(df1)
+0:for (esp in especialidades){
+0:df2$Especialidade <- gsub(esp,tolower(esp), df2$Especialidade)
+0:}
+0:table(df2$Especialidade)
+0:especialidades <- c('ULTRASSONOGRAFIA EM GINECOLOGIA E OBS', 'Urologia',
+0:'Reumatologia', 'Reprodução Assistida', 'Radioterapia',
+0:'Radiologia e Diagnóstico por Imagem', 'R3 Clínica Médica',
+0:'Psiquiatria', 'Pediatria', 'Patologia','Otorrinolaringologia',
+0:'Ortopedia e Traumatologia', 'Oncologia Clínica', 'Oftalmologia',
+0:'Obstetrícia e Ginecologia', 'Nutrologia', 'Neurologia Pediatrica',
+0:'Neurologia', 'Neurocirurgia', 'NEONATOLOGIA', 'Nefrologia',
+0:'Medicina Paliativa', 'MEDICINA INTENSIVA PEDIATRICA', 'Medicina Intensiva',
+0:'MEDICINA FETAL', 'Medicina de Família e Comunidade', 'Medicina de Emergência',
+0:'Mastologia', 'Infectologia', 'Homeopatia', 'Hematologia e Hemoterapia',
+0:'Geriatria', 'Gastroenterologia', 'ENDOSCOPIA RESPIRATORIA', 'ENDOCRINOLOGIA PEDIÁTRICA',
+0:'Endocrinologia e Metabologia', 'Emergência Pediátrica', 'ECOCARDIOGRAFIA',
+0:'Dermatologia', 'Coloproctologia', 'Clínica Médica', 'Cirurgia Vascular',
+0:'Cirurgia Torácica', 'Cirurgia Plástica', 'Cirurgia Pediátrica', 'Cirurgia Oncológica',
+0:'Cirurgia Geral', 'CIRURGIA DO TRAUMA', 'Cirurgia do Aparelho Digestivo',
+0:'Cirurgia de Cabeça e Pescoço', 'Cirurgia da Mão', 'Cirurgia craneo Maxilo Facial',
+0:'Cirurgia Cardiovascular', 'CARDIOLOGIA PEDIÁTRICA', 'Cardiologia', 'Anestesiologia',
+0:'ALERGIA E IMUNOLOGIA PEDIÁTRICA')
+0:df2 <- as.data.frame(df1)
+0:for (esp in especialidades){
+0:df2$Especialidade <- gsub(esp,tolower(esp), df2$Especialidade)
+0:}
+0:df2$Especialidade <- gsub('[A-Z]', '', df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍ-]','',df2$Especialidade)
+0:table(df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]','',df2$Especialidade)
+0:table(df2$Especialidade)
+0:x <- '   Some text. '
+0:trimws(x)
+0:df2$Especialidade <- sapply(df2$Especialidade, trimws)
+0:table(df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-2]','',df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-\d]','',df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]','',df2$Especialidade)
+0:table(df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-\\d]','',df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]\\d','',df2$Especialidade)
+0:table(df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]|\\d','',df2$Especialidade)
+0:table(df2$Especialidade)
+0:df2$Especialidade <- sapply(df2$Especialidade, trims)
+0:df2$Especialidade <- sapply(df2$Especialidade, trims)
+0:df2$Especialidade <- sapply(df2$Especialidade, trims)
+0:df2 <- as.data.frame(df1)
+0:for (esp in especialidades){
+0:df2$Especialidade <- gsub(esp,tolower(esp), df2$Especialidade)
+0:}
+0:df2$Especialidade <- gsub('[A-Z]', '', df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]|\\d','',df2$Especialidade)
+0:df2$Especialidade <- sapply(df2$Especialidade, trims)
+0:df2$Especialidade <- sapply(df2$Especialidade, trims())
+0:df2$Especialidade <- sapply(df2$Especialidade, trimws)
+0:table(df2$Especialidade)
+0:df2 <- as.data.frame(df1)
+0:especialidades <- c('ULTRASSONOGRAFIA EM GINECOLOGIA E OBS', 'Urologia',
+0:'Reumatologia', 'Reprodução Assistida', 'Radioterapia',
+0:'Radiologia e Diagnóstico por Imagem', 'R3 Clínica Médica',
+0:'Psiquiatria', 'Pediatria', 'Patologia','Otorrinolaringologia',
+0:'Ortopedia e Traumatologia', 'Oncologia Clínica', 'Oftalmologia',
+0:'Obstetrícia e Ginecologia', 'Nutrologia', 'Neurologia Pediatrica',
+0:'Neurologia', 'Neurocirurgia', 'NEONATOLOGIA', 'Nefrologia',
+0:'Medicina Paliativa', 'MEDICINA INTENSIVA PEDIATRICA', 'Medicina Intensiva',
+0:'MEDICINA FETAL', 'Medicina de Família e Comunidade', 'Medicina de Emergência',
+0:'Mastologia', 'Infectologia', 'Homeopatia', 'Hematologia e Hemoterapia',
+0:'Geriatria', 'Gastroenterologia', 'ENDOSCOPIA RESPIRATORIA', 'ENDOCRINOLOGIA PEDIÁTRICA',
+0:'Endocrinologia e Metabologia', 'Emergência Pediátrica', 'ECOCARDIOGRAFIA',
+0:'Dermatologia', 'Coloproctologia', 'Clínica Médica', 'Cirurgia Vascular',
+0:'Cirurgia Torácica', 'Cirurgia Plástica', 'Cirurgia Pediátrica', 'Cirurgia Oncológica',
+0:'Cirurgia Geral', 'CIRURGIA DO TRAUMA', 'Cirurgia do Aparelho Digestivo',
+0:'Cirurgia de Cabeça e Pescoço', 'Cirurgia da Mão', 'Cirurgia craneo Maxilo Facial',
+0:'Cirurgia Cardiovascular', 'CARDIOLOGIA PEDIÁTRICA', 'Cardiologia', 'Anestesiologia',
+0:'ALERGIA E IMUNOLOGIA PEDIÁTRICA')
+0:for (esp in especialidades){
+0:df2$Especialidade <- gsub(esp,tolower(esp), df2$Especialidade)
+0:}
+0:df2$Especialidade <- gsub('[A-Z]', '', df2$Especialidade)
+0:df2$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]|2','',df2$Especialidade)
+0:df2$Especialidade <- sapply(df2$Especialidade, trimws)
+0:df2$Especialidade <- as.factor(df2$Especialidade)
+0:table(df2$Especialidade)
+0:length(levels(df2$Especialidade))
+0:length(especialidades)
+0:for (esp in especialidades){
+0:df1$Especialidade <- gsub(esp,tolower(esp), df1$Especialidade)
+0:}
+0:df1$Especialidade <- gsub('[A-Z]', '', df1$Especialidade)
+0:df1$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]|2','',df1$Especialidade)
+0:df1$Especialidade <- sapply(df1$Especialidade, trimws)
+0:df1$Especialidade <- as.factor(df1$Especialidade)
+0:levels(df1$Especialidade)
+0:# Salva dataset_organizado.csv
+0:write_csv(df1, 'dataset_organizado.csv')
+0:library(readr)
+0:# Importação do dataset
+0:df_orig <- read_csv('dataset_organizado.csv')
+0:View(df_orig)
+0:## Análise para variáveis categóricas
+0:table(df_orig$Hospital)
+0:length(table(df_orig$Hospital))
+0:table(df_orig$Especialidade)
+0:levels(df_orig$Especialidade)
+0:## Análise para variáveis categóricas
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:levels(df_orig$Especialidade)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:table(df_orig$Hospital)
+0:levels(df_orig$Especialidade)
+0:levels(df_orig$Hospital)
+0:list_hospital <- levels(df_orig$Especialidade)
+0:list_especialidade <- levels(df_orig$Hospital)
+0:# Importação do dataset
+0:df_orig <- read_csv('dataset_organizado.csv')
+0:# Importação do dataset
+0:df_orig <- read_csv('dataset_organizado.csv', show_col_types = FALSE)
+0:## Análise para variáveis categóricas
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:list_hospital <- levels(df_orig$Especialidade)
+0:list_especialidade <- levels(df_orig$Hospital)
+0:list_hospital
+0:list_hospital
+0:data <- read_csv('resultados_residencia.csv')
+0:################################################################################
+0:#Cópia do data original para limpeza
+0:df <- data.frame(data)
+0:colnames(df) <- c(
+0:'Hospital',
+0:'Especialidade',
+0:'Candidato',
+0:'Pref',
+0:'Situacao',
+0:'Nota_Prova',
+0:'Bonus_Prova',
+0:'Nota_Curriculo',
+0:'Bonus_Curriculo',
+0:'Total'
+0:)
+0:# Retira as 2 primeiras linhas que não são dados pertinentes
+0:df <- df[-1:-2,]
+0:#Conta quantos NA tem em cada coluna
+0:colSums(is.na(df))
+0:# Subset df1 colunas: Hospital, Especialidade, Notas de provas e total
+0:df1 <- select(df, Hospital, Especialidade, Nota_Prova, Nota_Curriculo, Total)
+0:# Nesse caso, o Total contém um total de 432 NA, para resultados, aqui vamos dropar
+0:# do dataframe original df1 e salvar no df_na para podermos tratar e adicionar
+0:# posteriormente ao df1 original.
+0:df_na_original <- filter(df, is.na(Total))
+0:df_na <- select(df1, Hospital, Especialidade, Nota_Prova, Nota_Curriculo, Total) %>%
+0:filter(is.na(Total))
+0:# [1:48] Correçao
+0:df_na$Total[1:48] <- df_na$Nota_Curriculo[1:48]
+0:df_na$Nota_Curriculo[1:48] <- df_na$Nota_Prova[1:48]
+0:df_na$Nota_Prova[1:48] <- df_na_original$Pref[1:48]
+0:# [49: 144] Correçao
+0:df_na$Nota_Prova[49:144] <- df_na_original$Situacao[49:144]
+0:df_na$Nota_Curriculo[49:144] <- df_na_original$Bonus_Prova[49:144]
+0:df_na$Total[49:144] <- df_na_original$Bonus_Curriculo[49:144]
+0:#[145:162]
+0:df_na$Nota_Prova[145:162] <- df_na_original$Situacao[145:162]
+0:df_na$Nota_Curriculo[145:162] <- df_na_original$Bonus_Prova[145:162]
+0:df_na$Total[145:162] <- df_na_original$Bonus_Curriculo[145:162]
+0:#[163:192]
+0:df_na$Nota_Prova[163:192] <- df_na_original$Situacao[163:192]
+0:df_na$Nota_Curriculo[163:192] <- df_na_original$Bonus_Prova[163:192]
+0:df_na$Total[163:192] <- df_na_original$Bonus_Curriculo[163:192]
+0:#[193:240]
+0:df_na$Nota_Prova[193:240] <- df_na_original$Pref[193:240]
+0:df_na$Nota_Curriculo[193:240] <- df_na_original$Nota_Prova[193:240]
+0:df_na$Total[193:240] <- df_na_original$Nota_Curriculo[193:240]
+0:#[241:288 ]
+0:df_na$Nota_Prova[241:288] <- df_na_original$Situacao[241:288]
+0:df_na$Nota_Curriculo[241:288] <- df_na_original$Bonus_Prova[241:288]
+0:df_na$Total[241:288] <- df_na_original$Bonus_Curriculo[241:288]
+0:#[289:432]
+0:df_na$Nota_Prova[289:432] <- df_na_original$Pref[289:432]
+0:df_na$Nota_Curriculo[289:432] <- df_na_original$Nota_Prova[289:432]
+0:df_na$Total[289:432] <- df_na_original$Nota_Curriculo[289:432]
+0:df1 <- drop_na(df1)
+0:# Dataset editado para exploração dos dados
+0:df1 <- rbind(df1,df_na)
+0:# Alterando dados tipo char para numerico nas variáveis Nota_Prova,
+0:# Nota_ Curriculo e Total
+0:df1$Nota_Prova <- gsub(',','.', df1$Nota_Prova)
+0:df1$Nota_Curriculo <- gsub(',', '.', df1$Nota_Curriculo)
+0:df1$Total <- gsub(',', '.', df1$Total)
+0:df1$Nota_Prova <- sapply(df1$Nota_Prova, as.numeric)
+0:df1$Nota_Curriculo <- sapply(df1$Nota_Curriculo, as.numeric)
+0:df1$Total <- sapply(df1$Total, as.numeric)
+0:# Transformando Variáveis Hospitais e Especialidade em fatores
+0:df1$Hospital <- as.factor(df1$Hospital)
+0:df1$Especialidade <- as.factor(df1$Especialidade)
+0:View(levels(df1$Hospital))
+0:especialidades <- c('ULTRASSONOGRAFIA EM GINECOLOGIA E OBS', 'Urologia',
+0:'Reumatologia', 'Reprodução Assistida', 'Radioterapia',
+0:'Radiologia e Diagnóstico por Imagem', 'R3 Clínica Médica',
+0:'Psiquiatria', 'Pediatria', 'Patologia','Otorrinolaringologia',
+0:'Ortopedia e Traumatologia', 'Oncologia Clínica', 'Oftalmologia',
+0:'Obstetrícia e Ginecologia', 'Nutrologia', 'Neurologia Pediatrica',
+0:'Neurologia', 'Neurocirurgia', 'NEONATOLOGIA', 'Nefrologia',
+0:'Medicina Paliativa', 'MEDICINA INTENSIVA PEDIATRICA', 'Medicina Intensiva',
+0:'MEDICINA FETAL', 'Medicina de Família e Comunidade', 'Medicina de Emergência',
+0:'Mastologia', 'Infectologia', 'Homeopatia', 'Hematologia e Hemoterapia',
+0:'Geriatria', 'Gastroenterologia', 'ENDOSCOPIA RESPIRATORIA', 'ENDOCRINOLOGIA PEDIÁTRICA',
+0:'Endocrinologia e Metabologia', 'Emergência Pediátrica', 'ECOCARDIOGRAFIA',
+0:'Dermatologia', 'Coloproctologia', 'Clínica Médica', 'Cirurgia Vascular',
+0:'Cirurgia Torácica', 'Cirurgia Plástica', 'Cirurgia Pediátrica', 'Cirurgia Oncológica',
+0:'Cirurgia Geral', 'CIRURGIA DO TRAUMA', 'Cirurgia do Aparelho Digestivo',
+0:'Cirurgia de Cabeça e Pescoço', 'Cirurgia da Mão', 'Cirurgia craneo Maxilo Facial',
+0:'Cirurgia Cardiovascular', 'CARDIOLOGIA PEDIÁTRICA', 'Cardiologia', 'Anestesiologia',
+0:'ALERGIA E IMUNOLOGIA PEDIÁTRICA')
+0:for (esp in especialidades){
+0:df1$Especialidade <- gsub(esp,tolower(esp), df1$Especialidade)
+0:}
+0:df1$Especialidade <- gsub('[A-Z]', '', df1$Especialidade)
+0:df1$Especialidade <- gsub('[ÊÇÃÚÂÁÉÍÓ-]|2','',df1$Especialidade)
+0:df1$Especialidade <- gsub('berlandia','', df1$Especialidade)
+0:df1$Especialidade <- sapply(df1$Especialidade, trimws)
+0:# Salva dataset_organizado.csv
+0:write_csv(df1, 'dataset_organizado.csv')
+0:library(readr)
+0:# Importação do dataset
+0:df_orig <- read_csv('dataset_organizado.csv', show_col_types = FALSE)
+0:View(df_orig)
+0:## Análise para variáveis categóricas
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:list_hospital <- levels(df_orig$Hospital)
+0:list_especialidade <- levels(df_orig$Especialidade)
+0:list_hospital
+0:list_especialidade
+0:library(readr)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:install.packages("tidyverse")
+0:library(tidyverse)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:View(df_orig)
+0:knitr::opts_chunk$set(echo = TRUE)
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:knitr::opts_chunk$set(echo = TRUE)
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:View(df_orig)
+0:str(df_orig)
+0:summary(df_orig[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+0:boxplot(df_orig$Total, main ='Boxplot para as notas Total Todas Especialidades', ylab= 'Total Nota' )
+0:boxplot(df_orig$Nota_Prova, main = 'Boxplot para as notas Provas Todas Especialidades', ylab = 'Notas Provas')
+0:library(tidyverse)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:View(df_orig)
+0:str(df_orig)
+0:# resumos estatísticos dos valores númericos
+0:summary(df_orig[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+0:# plot boxplot geral, variáveis númericas:
+0:boxplot(df_orig$Total, main ='Boxplot para as notas Total Todas Especialidades', ylab= 'Total Nota' )
+0:boxplot(df_orig$Nota_Prova, main = 'Boxplot para as notas Provas Todas Especialidades', ylab = 'Notas Provas')
+0:boxplot(df_orig$Nota_Curriculo, main = 'Boxplot para notas Curriculos Todas Especialidades', ylab= 'Notas Curriculo')
+0:# Histogramas :
+0:hist(df_orig$Total, main='Hist Total Notas Geral', xlab='Notas Total')
+0:hist(df_orig$Nota_Prova, main='Hist Notas Provas Geral', xlab='Nota Prova')
+0:hist(df_orig$Nota_Curriculo, main='Hist Notas Curriculo Geral', xlab = 'Nota Curriculo')
+0:# Medidas de dispersão para as variáveis numéricas:
+0:var(df_orig$Nota_Prova)
+0:var(df_orig$Nota_Curriculo)
+0:var(df_orig$Total)
+0:sd(df_orig$Nota_Prova)
+0:sd(df_orig$Nota_Curriculo)
+0:sd(df_orig$Total)
+0:## Análise para variáveis categóricas
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:table(df_orig$Hospital)
+0:length(table(df_orig$Hospital))
+0:table(df_orig$Especialidade)
+0:list_hospital <- levels(df_orig$Hospital)
+0:list_especialidade <- levels(df_orig$Especialidade)
+0:library(shiny)
+0:runApp()
+0:runApp()
+0:runApp()
+0:?faithful
+0:View(faithful)
+0:runApp()
+0:runApp()
+0:runApp()
+0:runApp()
+0:runApp('app/')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:library(tidyverse)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:View(df_orig)
+0:list_hospital <- levels(df_orig$Hospital)
+0:list_especialidade <- levels(df_orig$Especialidade)
+0:### Filtrando resultados
+0:list_hospital
+0:## Análise para variáveis categóricas
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:list_hospital <- levels(df_orig$Hospital)
+0:list_especialidade <- levels(df_orig$Especialidade)
+0:### Filtrando resultados
+0:list_hospital
+0:class(list_hospital)
+0:for (i in list_hospital){print(i)}
+0:select(df_orig, .)
+0:select(df_orig)
+0:select(df_orig) %>% filter(Especialidade == 'clínica médica')
+0:select(df_orig, Hospital) %>% filter(Especialidade == 'clínica médica')
+0:select(df_orig) %>% filter('Especialidade' == 'clínica médica')
+0:select(df_orig) %>% filter(df_orig$Especialidade == 'clínica médica')
+0:View(a)
+0:a <- select(df_orig) %>% filter(df_orig$Especialidade == 'clínica médica')
+0:View(a)
+0:a <- select(df_orig, .) %>% filter(df_orig$Especialidade == 'clínica médica')
+0:View(a)
+0:a <- select(df_orig, Hospital, Especialidade, Total) %>% filter(df_orig$Especialidade == 'clínica médica')
+0:View(a)
+0:a <- df_orig %>% filter(df_orig$Especialidade == 'clínica médica')
+0:View(a)
+0:a <- df_orig %>% filter(df_orig$Especialidade == 'clínica médica') %>%
+0:filter(df_orig$Hospital =='Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:View(a)
+0:a <- df_orig %>% filter(df_orig$Especialidade == 'clínica médica') %>%
+0:filter(df_orig$Hospital =='Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:a <- df_orig %>% filter(df_orig$Especialidade == 'clínica médica') %>%
+0:filter(df_orig$Hospital =='Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:df_orig %>% filter(df_orig$Especialidade == 'clínica médica') %>% filter(df_orig$Hospital =='Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:df_orig %>% filter(df_orig$Especialidade == 'clínica médica')
+0:df_orig %>% filter(Especialidade == 'clínica médica')
+0:df_orig %>% filter(Especialidade == 'clínica médica') %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá
+0:')
+0:df_orig %>% filter(Especialidade == 'clínica médica') %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá
+0:')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá
+0:')
+0:df_orig %>% filter(Hospital == 'Associação Hospitalar Santa Rosália
+0:')
+0:df_orig %>% filter(Hospital == 'Associação Hospitalar Santa Rosália')
+0:df_orig %>% filter(Hospital == 'Associação Hospitalar Santa Rosália')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá') %>% filter(Especialidade =='clínica médica')
+0:%>% filter(Especialidade =='clínica médica')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá')
+0:df_orig %>% filter(Hospital == 'Associação Beneficente Católica / Hospital Santa Isabel - Ubá') %>%
+0:filter(Especialidade =='clínica médica')
+0:### Filtrando resultados
+0:list_hospital[2]
+0:df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade =='clínica médica')
+0:list_especialidade[2]
+0:list_especialidade[1]
+0:df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[2])
+0:df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[4])
+0:df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[6])
+0:list_especialidade
+0:df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[17])
+0:data <- df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[17])
+0:hist(data$Total, main='Hist Total Notas Geral', xlab='Notas Total')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:library(tidyverse)
+0:# Importação do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:df_orig$Hospital <- as.factor(df_orig$Hospital)
+0:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+0:list_hospital <- levels(df_orig$Hospital)
+0:list_especialidade <- levels(df_orig$Especialidade)
+0:### Filtrando resultados
+0:list_hospital[2]
+0:list_especialidade
+0:data <- df_orig %>% filter(Hospital == list_hospital[2]) %>%
+0:filter(Especialidade ==list_especialidade[17])
+0:hist(data$Total, main='Hist Total Notas Geral', xlab='Notas Total')
+0:hist(data$Nota_Prova, main='Hist Total Notas Geral', xlab='Notas Total')
+0:summary(data)
+0:summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+0:print.summary.table(summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')]))
+0:print.summary.table(data)
+0:print.summary.table(data, digits = )
+0:list_especialidade[17]
+0:list_hospital[2]
+0:plot_hist <- function(hosp, esp){
+0:data <- df_orig %>% filter(Hospital == hosp) %>%
+0:filter(Especialidade == esp)
+0:hist(data$Nota_Prova, main='Hist Total Notas Geral', xlab='Notas Total')
+0:}
+0:plot_hist(list_hospital[2], list_especialidade[17])
+0:plot_hist(list_hospital[2], list_especialidade[17])
+0:summaryPrint <- function(){
+0:data <- df_orig %>% filter(Hospital == hosp) %>%
+0:filter(Especialidade == esp)
+0:summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+0:}
+0:summaryPrint(list_hospital[2], list_especialidade[17])
+0:summaryPrint <- function(hosp, esp){
+0:data <- df_orig %>% filter(Hospital == hosp) %>%
+0:filter(Especialidade == esp)
+0:summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+0:}
+0:summaryPrint(list_hospital[2], list_especialidade[17])
+0:source('scripts/plot_results.R')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:source('scripts/plot_results.R')
+0:# import do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:source('scripts/plot_results.R')
+0:# import do dataset
+0:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+0:runApp('app')
+0:getwd()
+0:setwd(getwd())
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:df <- select(df_orig, Hospital) %>% filter(Hospital == input$especialidade)
+0:df <- select(df_orig, Hospital) %>% filter(Hospital == input$especialidade)
+0:df <- select(df_orig, Hospital) %>% filter(df_orig$Hospital == input$especialidade)
+0:df_orig
+0:df <- select(df_orig, Hospital) %>% filter(df_orig$Hospital == input$especialidade)
+0:df <- select(df_orig, Hospital) %>% filter(df_orig$Hospital == 'aa')
+0:df <- select(df_orig, Hospital) %>% filter(Hospital == 'aa')
+0:runApp('app')
+0:list_hospital
+0:df <- select(df_orig, Hospital) %>% filter(df_orig$Hospital == "Universidade Federal de Viçosa")
+0:df
+0:class(df)
+0:as.vector(df)
+0:runApp('app')
+0:runApp('app')
+0:df
+0:df_orig[['Universidade Federal de Viçosa']]
+0:df_orig[['Universidade Federal de Viçosa']]
+0:df_orig[['Universidade Federal de Viçosa']]
+0:df_orig['Universidade Federal de Viçosa']
+0:df_orig$Hospital['Universidade Federal de Viçosa']
+0:runApp('app')
+0:df_orig$Hospital['Universidade Federal de Viçosa']
+0:as.vector(df_orig$Hospital['Universidade Federal de Viçosa'])
+0:levels(df_orig$Hospital['Universidade Federal de Viçosa'])
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+0:runApp('app')
+1668037819985:getwd()
+1668037841919:install.packages('shiny')
+1668038109511:install.packages('tidyverse')
+1668041108897:shiny::runApp('app')
+1668041138819:library('tidyverse')
+1668041156834:install.packages('tidyverse')
+1668041171818:library('tidyverse')
+1668041512484:install.packages('tidyverse')
+1668041535571:getwd()
+1668041543180:set(getwd())
+1668041547540:setwd(getwd())
+1668041552364:library('tidyverse')
+1668041689932:library(tidyverse)
+1668041716613:install.packages('tidyverse')
+1668041821196:library(tidyverse)
+1668041826108:library(dplyr)
+1668041836188:library(tidyverse)
+1668041875508:library(readr)
+1668041880090:runApp('app')

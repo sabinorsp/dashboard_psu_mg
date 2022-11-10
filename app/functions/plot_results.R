@@ -1,4 +1,5 @@
-library(tidyverse)
+library(dplyr)
+library(readr)
 # import do dataset
 df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
 df_orig$Hospital <- as.factor(df_orig$Hospital)
