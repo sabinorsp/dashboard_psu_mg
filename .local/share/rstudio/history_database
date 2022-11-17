@@ -529,3 +529,420 @@
 1668041836188:library(tidyverse)
 1668041875508:library(readr)
 1668041880090:runApp('app')
+1668177232802:shiny::runApp('app')
+1668446150654:runApp('app')
+1668446407067:?selectizeInput
+1668446464436:runApp('app')
+1668448179668:library(tidyverse)
+1668448197077:#library(tidyverse)
+1668448197077:library(dplyr)
+1668448197485:library(readr)
+1668448198710:# Importação do dataset
+1668448198710:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668448215945:getwd()
+1668448246168:setwd('/home/rstudio/app')
+1668448249648:# Importação do dataset
+1668448249649:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668448251575:View(df_orig)
+1668448317031:runApp()
+1668449405942:runApp()
+1668450719329:# import do dataset
+1668450719329:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668451051319:# import do dataset
+1668451051319:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668451052916:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668451054468:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668451055372:list_hospital <- levels(df_orig$Hospital)
+1668451055646:list_especialidade <- levels(df_orig$Especialidade)
+1668451135403:df_orig %>%
+1668451135404:summarise(media_nota_curriculo = mean(Nota_Curriculo))
+1668451178541:df_orig %>%
+1668451178542:summarise(media_nota_curriculo = mean(Nota_Curriculo),
+1668451178542:nota_maxima_curriculo = max(Nota_Curriculo))
+1668459041695:# import do dataset
+1668459041695:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668459088313:# Código teste ( pode ser apagado)
+1668459088314:data <- df_orig %>% filter(Especialidade == esp)
+1668459097455:data
+1668459104272:View(data)
+1668459146882:runApp()
+1668459162526:runApp()
+1668459804576:# Código teste ( pode ser apagado)
+1668459804576:data <- df_orig %>% filter(Especialidade == esp)
+1668460099069:data <- df_orig %>% filter(Especialidade == esp)
+1668460127383:data <- df_orig %>% filter(Especialidade == 'clinica geral')
+1668460132183:data
+1668460143408:data <- df_orig %>% filter(Especialidade == 'Clinica Geral')
+1668460146079:data
+1668460187486:head(df_orig)
+1668460747151:# Código teste ( pode ser apagado)
+1668460747152:data <- df_orig %>% filter(Especialidade == 'clínica geral')
+1668460755926:data
+1668460776688:head(df_orig)
+1668460792999:# Código teste ( pode ser apagado)
+1668460792999:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668460816622:data
+1668538649697:library(dplyr)
+1668538649898:library(readr)
+1668538650972:# import do dataset
+1668538650972:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668538663831:getwd()
+1668538674459:setwd('/home/rstudio/app')
+1668538680074:library(dplyr)
+1668538680448:library(readr)
+1668538687404:# import do dataset
+1668538687405:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668538688844:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668538689122:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668538689594:list_hospital <- levels(df_orig$Hospital)
+1668538690532:list_especialidade <- levels(df_orig$Especialidade)
+1668538694371:plot_hist <- function(hosp, esp){
+1668538694372:data <- df_orig %>% filter(Hospital == hosp) %>%
+1668538694373:filter(Especialidade == esp)
+1668538694373:hist(data$Nota_Prova, main='Histograma - Nota Total', xlab='Notas Total')
+1668538694373:}
+1668538694896:summaryPrint <- function(hosp, esp){
+1668538694897:data <- df_orig %>% filter(Hospital == hosp) %>%
+1668538694897:filter(Especialidade == esp)
+1668538694898:summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+1668538694898:}
+1668538703732:# Código teste ( pode ser apagado)
+1668538703732:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668538704256:head(df_orig)
+1668538730515:head(data)
+1668538769164:table(data)
+1668538863861:table(data$Hospital)
+1668539079694:table <- table(data$Hospital)
+1668539115275:table_sort <- table[order(table)]
+1668539124722:table_sort
+1668539176660:table_sort <- table[order(table, decreasing=T)]
+1668539177099:table_sort
+1668539186437:# Código teste ( pode ser apagado)
+1668539186437:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668539188324:table <- table(data$Hospital)
+1668539188891:table_sort <- table[order(table, decreasing=T)]
+1668539189929:table_sort
+1668539218838:runApp()
+1668539618220:# Código teste ( pode ser apagado)
+1668539618220:data <- df_orig %>% filter(Especialidade == 'alergia e imunologia pediátrica')
+1668539619556:head(data)
+1668539622722:table <- table(data$Hospital)
+1668539623474:table_sort <- table[order(table, decreasing=T)]
+1668539624149:table_sort
+1668539705053:data
+1668540045600:todf <- data.frame(data)
+1668540047424:todf
+1668540051352:table(df)
+1668540059784:table(todf)
+1668540090903:todf
+1668540111056:length(todf$Hospital)
+1668540193522:table(todf$Hospital)
+1668540345344:data$Hospital <- droplevels(data$Hospital)
+1668540347120:table <- table(data$Hospital)
+1668540347705:table_sort <- table[order(table, decreasing=T)]
+1668540348687:table_sort
+1668540363921:# Código teste ( pode ser apagado)
+1668540363921:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668540365278:head(data)
+1668540366853:data$Hospital <- droplevels(data$Hospital)
+1668540367516:table <- table(data$Hospital)
+1668540368255:table_sort <- table[order(table, decreasing=T)]
+1668540368799:table_sort
+1668540442680:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668540462600:table_sort
+1668540475494:View(table_sort)
+1668540553992:colnames(table_sort) <- c('Hospitais', 'Quantidade Inscrição')
+1668540564517:View(table_sort)
+1668541055716:data$Hospital
+1668541210591:data %>% group_by(Hospital) %>%
+1668541210592:summarise(media = mean(Total))
+1668541326813:quantile(data$Total)
+1668541338769:quantile(data$Total)[4]
+1668541357151:class(quantile(data$Total)[4])
+1668541964696:data %>% group_by(Hospital) %>%
+1668541964696:summarise(media = mean(Total),
+1668541964697:terc_quartil = quantile(Total))
+1668541982587:data %>% group_by(Hospital) %>%
+1668541982588:summarise(media = mean(Total),
+1668541982588:terc_quartil = quantile(Total))
+1668541994071:class(quantile(data$Total))
+1668541999697:quantile(data$Total)
+1668542028819:data %>% group_by(Hospital) %>%
+1668542028819:summarise(media = mean(Total),
+1668542028820:terc_quartil = quantile(Total)[4])
+1668542052174:runApp()
+1668542090545:runApp()
+1668542109169:runApp()
+1668542129719:ls
+1668542146574:setwd('/home/rstudio/')
+1668542149417:runApp('app')
+1668542216541:runApp('app')
+1668542276266:# import do dataset
+1668542276267:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668542279009:library(dplyr)
+1668542279862:library(readr)
+1668542280623:# import do dataset
+1668542280623:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668542281143:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668542281399:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668542308284:setwd('/home/rstudio/app')
+1668542343343:setwd('/home/rstudio/app')
+1668542355495:runApp()
+1668542378581:setwd('/home/rstudio/app')
+1668542380780:library(dplyr)
+1668542381322:library(readr)
+1668542383538:# import do dataset
+1668542383538:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668542384052:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668542384508:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668542384832:list_hospital <- levels(df_orig$Hospital)
+1668542385104:list_especialidade <- levels(df_orig$Especialidade)
+1668542386794:plot_hist <- function(hosp, esp){
+1668542386795:data <- df_orig %>% filter(Hospital == hosp) %>%
+1668542386796:filter(Especialidade == esp)
+1668542386796:hist(data$Nota_Prova, main='Histograma - Nota Total', xlab='Notas Total')
+1668542386797:}
+1668542387851:summaryPrint <- function(hosp, esp){
+1668542387852:data <- df_orig %>% filter(Hospital == hosp) %>%
+1668542387852:filter(Especialidade == esp)
+1668542387853:summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])
+1668542387853:}
+1668542388755:hospital_list <- function(esp){
+1668542388755:data <- df_orig %>% filter(Especialidade == esp)
+1668542388756:data$Hospital <- droplevels(data$Hospital)
+1668542388756:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668542388757:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos')
+1668542388757:return(table_sort)
+1668542388758:}
+1668542411407:hospital_list('clínica médica')
+1668542451973:runApp()
+1668542698031:runApp()
+1668542746520:shiny::runApp('app')
+1668542776569:# Código teste ( pode ser apagado)
+1668542776569:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668542777932:data$Hospital <- droplevels(data$Hospital)
+1668542781061:table <- table(data$Hospital)
+1668542782412:table_sort <- table[order(table, decreasing=T)]
+1668542783019:data %>% group_by(Hospital) %>%
+1668542783020:summarise(media = mean(Total),
+1668542783020:terc_quartil = quantile(Total)[4])
+1668542806787:runApp('app')
+1668542904337:data %>% group_by(Hospital) %>%
+1668542904337:summarise(media = mean(Total),
+1668542904338:terc_quartil = quantile(Total)[4])
+1668543648439:data$Hospital <- droplevels(data$Hospital)
+1668543649510:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668543650276:df_sum <- data %>% group_by(Hospital) %>%
+1668543650277:summarise(media = mean(Total),
+1668543650278:terc_quartil = quantile(Total)[4])
+1668543651492:table_sort <- cbind(df_sum, media, terc_quartil)
+1668543663587:table_sort
+1668543688923:# Código teste ( pode ser apagado)
+1668543688923:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668543694278:data$Hospital <- droplevels(data$Hospital)
+1668543694778:table <- table(data$Hospital)
+1668543695209:table_sort <- table[order(table, decreasing=T)]
+1668543695883:data %>% group_by(Hospital) %>%
+1668543695883:summarise(media = mean(Total),
+1668543695884:terc_quartil = quantile(Total)[4])
+1668543709524:df_sum <- data %>% group_by(Hospital) %>%
+1668543709524:summarise(media = mean(Total),
+1668543709525:terc_quartil = quantile(Total)[4])
+1668543714180:df_sum
+1668543732803:table_sort <- cbind(data.frame(df_sum), media, terc_quartil)
+1668543752658:table_sort <- cbind(data.frame(df_sum), c('media', 'terc_quartil')
+1668543752659:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos')
+1668543763215:table_sort <- cbind(data.frame(df_sum), c('media', 'terc_quartil'))
+1668543788947:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668543799842:View(table_sort)
+1668543832013:# import do dataset
+1668543832013:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668543840591:getwd()
+1668543851517:setwd('/home/rstudio/app')
+1668543855052:# import do dataset
+1668543855053:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668543856868:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668543857073:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668543857256:list_hospital <- levels(df_orig$Hospital)
+1668543858779:list_especialidade <- levels(df_orig$Especialidade)
+1668543864627:# Código teste ( pode ser apagado)
+1668543864628:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668543870229:a
+1668543872539:data$Hospital <- droplevels(data$Hospital)
+1668543873491:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668543885509:data$Hospital <- droplevels(data$Hospital)
+1668543887065:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668543908148:table_sort <- data.frame(table[order(data, decreasing=T)])
+1668543942771:table_sort <- data.frame(table[order(table(data), decreasing=T)])
+1668544979666:# Código teste ( pode ser apagado)
+1668544979667:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668544979870:data$Hospital <- droplevels(data$Hospital)
+1668544981652:table <- table(data$Hospital)
+1668544982133:table_sort <- table[order(table, decreasing=T)]
+1668544982682:data %>% group_by(Hospital) %>%
+1668544982683:summarise(media = mean(Total),
+1668544982683:terc_quartil = quantile(Total)[4])
+1668545015780:data$Hospital <- droplevels(data$Hospital)
+1668545016645:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668545019861:df_sum <- data %>% group_by(Hospital) %>%
+1668545019861:summarise(media = mean(Total),
+1668545019862:terc_quartil = quantile(Total)[4])
+1668545028531:table_sort
+1668545044557:View(table_sort)
+1668545088434:table_sort <- cbind(data.frame(df_sum), c('media', 'terc_quartil'))
+1668545094441:View(table_sort)
+1668545517929:table_sort <- cbind(df_sum$media, df_sum$terc_quartil, c('media', 'terc_quartil'))
+1668545520341:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668545528902:# Código teste ( pode ser apagado)
+1668545528902:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668545537854:library(dplyr)
+1668545538061:library(readr)
+1668545539935:# import do dataset
+1668545539935:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668545541805:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668545542014:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668545542213:list_hospital <- levels(df_orig$Hospital)
+1668545542613:list_especialidade <- levels(df_orig$Especialidade)
+1668545545986:# Código teste ( pode ser apagado)
+1668545545986:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668545548972:data$Hospital <- droplevels(data$Hospital)
+1668545549270:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668545589260:table_sort <- data.frame(table[order(data, decreasing=T)])
+1668545617645:table_sort <- data.frame(table[order(table(data$Hospital), decreasing=T)])
+1668545643182:table_sort <- data.frame(data[order(table(data$Hospital), decreasing=T)])
+1668545654870:# import do dataset
+1668545654871:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668545656055:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668545656293:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668545656540:list_hospital <- levels(df_orig$Hospital)
+1668545657109:list_especialidade <- levels(df_orig$Especialidade)
+1668545670878:data$Hospital <- droplevels(data$Hospital)
+1668545674766:# Código teste ( pode ser apagado)
+1668545674767:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668545677515:data$Hospital <- droplevels(data$Hospital)
+1668545679021:table_sort <- data.frame(data[order(table(data$Hospital), decreasing=T)])
+1668545681435:df_sum <- data %>% group_by(Hospital) %>%
+1668545681436:summarise(media = mean(Total),
+1668545681436:terc_quartil = quantile(Total)[4])
+1668545683779:table_sort <- cbind(df_sum$media, df_sum$terc_quartil, c('media', 'terc_quartil'))
+1668545685117:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668545696149:View(table_sort)
+1668545724653:# import do dataset
+1668545724654:df_orig <- read_csv('data/dataset_organizado.csv', show_col_types = FALSE)
+1668545724884:df_orig$Hospital <- as.factor(df_orig$Hospital)
+1668545725077:df_orig$Especialidade <- as.factor(df_orig$Especialidade)
+1668545725262:list_hospital <- levels(df_orig$Hospital)
+1668545725662:list_especialidade <- levels(df_orig$Especialidade)
+1668545728870:# Código teste ( pode ser apagado)
+1668545728871:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668545734221:data$Hospital <- droplevels(data$Hospital)
+1668545735597:table_sort <- data.frame(data[order(table(data$Hospital), decreasing=T)])
+1668545750310:table_sort
+1668545798468:data$Hospital <- droplevels(data$Hospital)
+1668545798861:table <- table(data$Hospital)
+1668545799766:table_sort <- data.frame(data[order(table, decreasing=T)])
+1668545826766:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668545829726:df_sum <- data %>% group_by(Hospital) %>%
+1668545829727:summarise(media = mean(Total),
+1668545829727:terc_quartil = quantile(Total)[4])
+1668545830357:table_sort <- cbind(df_sum$media, df_sum$terc_quartil)
+1668545833666:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668545841837:table_sort
+1668545948021:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668545949530:df_sum <- data %>% group_by(Hospital) %>%
+1668545949531:summarise(media = mean(Total),
+1668545949531:terc_quartil = quantile(Total)[4])
+1668545950229:table_sort <- cbind(table_sort, df_sum$media, df_sum$terc_quartil)
+1668545951970:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668545960037:View(table_sort)
+1668546035524:class(table_sort)
+1668546344733:getwd()
+1668546358741:setwd('/home/rstudio/')
+1668546362213:getwd()
+1668546367382:runApp('app')
+1668636793243:getwd()
+1668636797274:shiny::runApp('app')
+1668637190899:runApp('app')
+1668637264801:runApp('app')
+1668637562718:runApp('app')
+1668637727460:runApp('app')
+1668637880219:runApp('app')
+1668638323939:runApp('app')
+1668638398009:runApp('app')
+1668638656119:runApp('app')
+1668638720629:# Código teste ( pode ser apagado)
+1668638720630:data <- df_orig %>% filter(Especialidade == 'alergia e imunologia pediátrica')
+1668638722749:data$Hospital <- droplevels(data$Hospital)
+1668638723874:table <- table(data$Hospital)
+1668638724549:table_sort <- table[order(table, decreasing=T)]
+1668638725650:data %>% group_by(Hospital) %>%
+1668638725650:summarise(media = mean(Total),
+1668638725651:terc_quartil = quantile(Total)[4])
+1668638738089:data$Hospital <- droplevels(data$Hospital)
+1668638739259:table <- table(data$Hospital)
+1668638739864:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668638740385:df_sum <- data %>% group_by(Hospital) %>%
+1668638740386:summarise(media = mean(Total),
+1668638740386:terc_quartil = quantile(Total)[4])
+1668638741053:table_sort <- cbind(table_sort, df_sum$media, df_sum$terc_quartil)
+1668638742136:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668638754688:View(table_sort)
+1668638790841:data %>% group_by(Hospital) %>%
+1668638790842:summarise(media = mean(Total),
+1668638790843:terc_quartil = quantile(Total)[4])
+1668638830758:table <- table(data$Hospital)
+1668638833364:table
+1668638847700:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668638859064:table_sort
+1668638867440:View(table_sort)
+1668638888686:df_sum <- data %>% group_by(Hospital) %>%
+1668638888687:summarise(media = mean(Total),
+1668638888687:terc_quartil = quantile(Total)[4])
+1668638893004:df_sum
+1668638899836:View(df_sum)
+1668638981188:table_sort <- cbind(table_sort, df_sum$media, df_sum$terc_quartil)
+1668638987206:table_sort
+1668638996315:View(table_sort)
+1668639341824:install.packages('DT')
+1668639422466:runApp('app')
+1668639572993:runApp('app')
+1668639831130:runApp('app')
+1668640029668:runApp('app')
+1668640326576:View(data)
+1668640371124:# Código teste ( pode ser apagado)
+1668640371125:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668640373528:data$Hospital <- droplevels(data$Hospital)
+1668640374317:table <- table(data$Hospital)
+1668640374632:table_sort <- table[order(table, decreasing=T)]
+1668640375129:data %>% group_by(Hospital) %>%
+1668640375129:summarise(media = mean(Total),
+1668640375130:terc_quartil = quantile(Total)[4])
+1668640381316:View(data)
+1668640506875:runApp('app')
+1668640548613:runApp('app')
+1668640700852:runApp('app')
+1668641194302:data
+1668641202261:round(data, digits = 3)
+1668645902507:head(data)
+1668645910990:head(data)
+1668645923660:View(data)
+1668645992160:round(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')], digits = 3)
+1668646000738:round(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')], digits = 3)
+1668646020513:round(data, digits = 3)
+1668646354262:# Código teste ( pode ser apagado)
+1668646354262:data <- df_orig %>% filter(Especialidade == 'clínica médica')
+1668646356805:s
+1668646358589:data$Hospital <- droplevels(data$Hospital)
+1668646358901:table <- table(data$Hospital)
+1668646359213:table_sort <- data.frame(table[order(table, decreasing=T)])
+1668646359578:df_sum <- data %>% group_by(Hospital) %>%
+1668646359578:summarise(media = mean(Total),
+1668646359579:terc_quartil = quantile(Total)[4])
+1668646360018:table_sort <- cbind(table_sort, df_sum$media, df_sum$terc_quartil)
+1668646361154:colnames(table_sort) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
+1668646368467:View(table_sort)
+1668646421664:runApp('app')
+1668646540429:runApp('app')
+1668646645668:runApp('app')
+1668646709632:runApp('app')
+1668646766996:runApp('app')
