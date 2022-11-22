@@ -1,7 +1,14 @@
 server <- function(input, output, session) {
   
+  datall <- reactive({
+      validate(
+        need(input$especialidade !='', "Por favor, selecione uma especialidade! ")
+      )
+      input$especialidade
+    })
+ 
   output$plot_hist <- renderPlot({
-    plot_hist(input$SelectHospital, input$especialidade)
+    try(plot_hist(input$SelectHospital, input$especialidade), silent = T)
   })
   
   output$SelectHospital <- renderUI ({
@@ -15,9 +22,10 @@ server <- function(input, output, session) {
   })
   
   output$table <- DT::renderDataTable(datatable(
-    hospital_list(input$especialidade),
+    hospital_list(datall()),
     options = list(pageLength = 5),
-    style = 'bootstrap') %>% formatRound(columns = c('Média Nota Total', '3° Quartil'), digits = 2)
+    caption = '** Representa 75% dos valores de todas as notas totais',
+    style = 'bootstrap') %>% formatRound(columns = c('Média Nota Total', '3° Quartil**'), digits = 2) 
   )
   
 }# End 

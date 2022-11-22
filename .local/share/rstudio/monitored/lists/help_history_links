@@ -1,1 +1,3 @@
 help/library/shiny/html/selectInput.html,R: Create a select list input control
+help/library/base/html/lapply.html,R: Apply a Function over a List or Vector
+help/library/base/html/get.html,R: Return the Value of a Named Object

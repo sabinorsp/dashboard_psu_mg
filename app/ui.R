@@ -15,9 +15,7 @@ ui <- fluidPage(
       
     mainPanel(
       
-      #selectInput("especialidade",label="1° - Escolha a Especialidade",choice=c('',list_especialidade),  selectize = F),
       DT::dataTableOutput('table'),
-      #uiOutput('SelectHospital'),
       plotOutput(outputId = 'plot_hist'),
       h2("Resumos estatísticos: "),
       verbatimTextOutput('sum')
