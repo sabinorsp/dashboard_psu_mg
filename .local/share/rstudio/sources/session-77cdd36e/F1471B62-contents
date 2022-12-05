@@ -1,0 +1,31 @@
+server <- function(input, output, session) {
+  
+  datall <- reactive({
+      validate(
+        need(input$especialidade !='', "Por favor, selecione uma especialidade! ")
+      )
+      input$especialidade
+    })
+ 
+  output$plot_hist <- renderPlot({
+    try(plot_hist(input$SelectHospital, input$especialidade), silent = T)
+  })
+  
+  output$SelectHospital <- renderUI ({
+    df <- select(df_orig, Hospital) %>% filter(df_orig$Especialidade == input$especialidade)
+    hospitals <- as.factor(df$Hospital)
+    selectInput("SelectHospital",'2° - Selecione o Hospital:', choices = hospitals)
+  })
+  
+  output$sum <- renderPrint({
+    summaryPrint(input$SelectHospital, input$especialidade)
+  })
+  
+  output$table <- DT::renderDataTable(datatable(
+    hospital_list(datall()),
+    options = list(pageLength = 5),
+    caption = '** Representa 75% dos valores de todas as notas totais',
+    style = 'bootstrap') %>% formatRound(columns = c('Média Nota Total', '3° Quartil**'), digits = 2) 
+  )
+  
+}# End 

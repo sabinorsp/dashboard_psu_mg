@@ -1,0 +1,13 @@
+name: psuapp
+title: psuapp
+username:
+account: sabinorsp
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 7707893
+bundleId: 6544098
+url: https://sabinorsp.shinyapps.io/psuapp/
+when: 1669143801.51221
+lastSyncTime: 1669143801.51223
+asMultiple: FALSE
+asStatic: FALSE

@@ -17,7 +17,7 @@ plot_hist <- function(hosp, esp){
 summaryPrint <- function(hosp, esp){
   data <- df_orig %>% filter(Hospital == hosp) %>%
     filter(Especialidade == esp)
-  summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])                     
+    summary(data[c('Nota_Prova', 'Nota_Curriculo', 'Total')])                     
 }
 
 hospital_list <- function(esp){

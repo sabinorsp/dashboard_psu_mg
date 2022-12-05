@@ -4,6 +4,5 @@
         "name": "Pastel On Dark",
         "url": "theme/default/pastel_on_dark.rstheme",
         "isDark": true
-    },
-    "error_handler_type": "traceback"
+    }
 }

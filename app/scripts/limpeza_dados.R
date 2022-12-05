@@ -3,7 +3,8 @@ library(dplyr)
 library(tidyr)
 data <- read_csv('data/resultados_residencia.csv', show_col_types = FALSE)
 
-################################################################################
+###############################################################################
+# Limpeza e processamento dos dados relacionados as incrições prévias para 2023
 #Cópia do data original para limpeza
 df <- data.frame(data)
 colnames(df) <- c(
@@ -112,10 +113,18 @@ df1$Especialidade <- sapply(df1$Especialidade, trimws)
 # Salva dataset_organizado.csv 
 write_csv(df1, 'dataset_organizado.csv')
 ################################################################################
-
-
-
-
-
+# Limpeza e processamento dos dados relacionados as inscrições para 2023
+# Em desenvolvimento...
+df_relacao <- read_csv('data/relacao_incritos.csv', show_col_types = F)
+df_r <- data.frame(df_relacao)
+colnames(df_r) <- c(
+  'Instituição',
+  'col2',
+  'Especialidade',
+  'Qtd Inscricao',
+  'Vagas',
+  'Candidato/Vagas'
+)
+################################################################################
 
 
