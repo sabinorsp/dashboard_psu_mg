@@ -16,6 +16,8 @@ ui <- fluidPage(
     mainPanel(
       
       DT::dataTableOutput('table'),
+      #h2('Classificação de Notas do Hospital Selecionado:'),
+      #DT::dataTableOutput('table_hospital'),
       plotOutput(outputId = 'plot_hist'),
       h2("Resumos estatísticos: "),
       verbatimTextOutput('sum')

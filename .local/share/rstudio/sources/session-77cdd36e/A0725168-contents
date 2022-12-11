@@ -1,0 +1,36 @@
+library(shiny)
+library(DT)
+source('functions/plot_results.R')
+
+ui <- fluidPage(
+  
+  titlePanel("Histórico Notas Residencia Médica PSU 2022 - MG "),
+  h5('Esta aplicação reune os resultados das notas da edição do PSU de 2022-MG.
+     Este dashboard tem como objetivo  promover a facilidade de pesquisas em dados históricos dos resultados 
+     e servir ao candidato uma visualização em forma direta e simplificada.'),
+  br(),
+  br(),
+  br(),
+    sidebarLayout(
+  
+    sidebarPanel(
+      selectInput("especialidade",label="1° - Escolha a Especialidade",choice=c('',list_especialidade),  selectize = F),
+      uiOutput('SelectHospital'),
+      h5('')
+      ),# End sidebarPanel
+      
+    mainPanel(
+      
+      DT::dataTableOutput('table'),
+      br(),
+      br(),
+      DT::dataTableOutput('table_hospital'),
+      plotOutput(outputId = 'plot_hist'),
+      h2("Resumos estatísticos: "),
+      verbatimTextOutput('sum')
+      
+      
+    ) # End mainPanel
+    
+  )# End sidebarLayout
+ ) # End Fluid

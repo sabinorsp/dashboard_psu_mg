@@ -6,7 +6,7 @@ server <- function(input, output, session) {
       )
       input$especialidade
     })
- 
+  
   output$plot_hist <- renderPlot({
     try(plot_hist(input$SelectHospital, input$especialidade), silent = T)
   })
@@ -24,8 +24,15 @@ server <- function(input, output, session) {
   output$table <- DT::renderDataTable(datatable(
     hospital_list(datall()),
     options = list(pageLength = 5),
-    caption = '** Representa 75% dos valores de todas as notas totais',
-    style = 'bootstrap') %>% formatRound(columns = c('Média Nota Total', '3° Quartil**'), digits = 2) 
+    caption = 'RESULTADO ESPECIALIDADE POR HOSPITAL:',
+    style = 'bootstrap') %>% formatRound(columns = c('Média Nota Total', '3° Quartil'), digits = 2) 
+  )
+  
+  output$table_hospital <- DT::renderDataTable(datatable(
+    by_hospital(input$especialidade, input$SelectHospital),
+    options = list(pageLength = 5),
+    caption = 'ORDENAÇÃO DE NOTAS POR HOSPITAL SELECIONADO:',
+    style = 'bootstrap') %>% formatRound(columns = c('Nota_Prova', 'Nota_Curriculo', 'Total'), digits = 2) 
   )
   
 }# End 

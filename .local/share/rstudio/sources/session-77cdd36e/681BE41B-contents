@@ -28,7 +28,14 @@ hospital_list <- function(esp){
               summarise(media = mean(Total),
                         terc_quartil = quantile(Total)[4]) %>% data.frame()
     table <- cbind(table, df_sum$media, df_sum$terc_quartil)
-    colnames(table) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil**')
+    colnames(table) <- c('Hospitais', 'Qtd de inscritos', 'Média Nota Total', '3° Quartil')
     return(table[order(-table$`Qtd de inscritos`),])
+}
+
+by_hospital <- function(esp, hosp){
+  data <- df_orig %>% filter(Hospital == hosp) %>%
+    filter(Especialidade == esp)
+  table <- data %>% select(Nota_Prova, Nota_Curriculo, Total)
+  return(table[order(-table$Total), ])
 }
 

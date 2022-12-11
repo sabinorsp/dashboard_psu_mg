@@ -1,5 +1,5 @@
+~/app/ui.R
 ~/app/server.R
 ~/app/functions/plot_results.R
-~/app/ui.R
 ~/install_packages.R
 ~/app/scripts/analise_exploratoria_dados.R
