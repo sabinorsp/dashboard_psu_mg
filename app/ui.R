@@ -19,7 +19,7 @@ ui <- fluidPage(
       h5('Desejamos continuar evoluindo com esta aplicação! 
          Por isso gostariamos de receber comentários e críticas! '),
       h5('Caso deseje contribuir, basta encaminhar um email com assunto FEEDBACK para:'),
-      tags$a(href="mailto:name@email.com", "sabinorsp@gmail.com")
+      tags$a(href="https://forms.gle/vMN9jdCBhrfTtjqL9", "sabinorsp@gmail.com")
       ),# End sidebarPanel
       
     mainPanel(
