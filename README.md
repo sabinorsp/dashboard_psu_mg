@@ -1,4 +1,4 @@
-# Project Describe: 
+# Project Descriptions: 
   This project aimed to create a web application with the dashboard model ( using Python, statistical software R and the Shiny framework) for loading and making avaliable data regarding the notes of the selective process of medical residency of the PSU of the year 2022 in Minas Gerais Brazil. 
   
   The data are originally available via a pdf document on the http://www.aremg.org.br/ portal, that is, the document contains a list of all the specialties and hospitals that are part of the selection process.
