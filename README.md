@@ -24,3 +24,9 @@ The web Dashboard must allow the candidate to:
  Run `ui.server` on RStudio and Run App.
 
 # Some results and Examples: 
+
+![](/img_examples/front1.png "Figure-1")
+
+![](/img_examples/front2.png "Figure-2")
+
+![](/img_examples/front3.png "Figure-3")
