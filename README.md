@@ -5,7 +5,7 @@
   
   The motivation to create this Dashboard was to facilitate research on the results of the 2022 PSU-MG selection process and also to provide the user (the candidate) with a direct and simplified view.
 
-# Fundamentals Objetives: 
+# Objetives: 
 The web Dashboard must allow the candidate to:
   * Search filters by Specialty;  
   * Search filters to select the desired Hospital;  
