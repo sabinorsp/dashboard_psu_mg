@@ -25,7 +25,7 @@ The web Dashboard must allow the candidate to:
 
 # Some results and Examples: 
 
-![](/img_examples/front1.png "Figure-1")
+![Figure - 1](/img_examples/front1.png "Figure-1")
 
 ![](/img_examples/front2.png "Figure-2")
 
