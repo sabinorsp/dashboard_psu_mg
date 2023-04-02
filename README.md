@@ -25,8 +25,10 @@ The web Dashboard must allow the candidate to:
 
 # Some results and Examples: 
 
-![Figure - 1](/img_examples/front1.png "Figure-1")
+![](/img_examples/front1.png)
 
-![](/img_examples/front2.png "Figure-2")
+![](/img_examples/front2.png)
 
-![](/img_examples/front3.png "Figure-3")
+![](/img_examples/front3.png)
+
+This application was put into production in the AWS environment from 12/22/2022 to 01/22/2023 to be made available to users (candidates referring to the 2023 selection process) in order to collect some feedback for future improvements.
