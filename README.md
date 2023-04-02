@@ -20,9 +20,7 @@ The web Dashboard must allow the candidate to:
 # How to run: 
 ## Versions Packages: 
   * R: 4.2.1
- 
-This application execution is made by container docker:  
-run the application:
-  * Linux: `$ sudo docker run -d -p 8787:8787 -e PASSWORD=<password>  --name rstudio -v $(pwd):/home/rstudio  rocker/rstudio:4.2.1`  
+  * 
+ Run `ui.server` on RStudio and Run App.
 
 # Some results and Examples: 
