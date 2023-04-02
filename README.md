@@ -18,5 +18,6 @@ The web Dashboard must allow the candidate to:
   * Presentation of a statistical summary of test scores, curriculum score and total score (maximum, minimum, average, median, 1st and 3rd quartile) given the desired specialty and hospital filter.
 
 # How to run: 
+## Versions Packages: 
 
 # Some results and Examples: 
